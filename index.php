@@ -15,5 +15,5 @@ $csslink = "view/css/nav.css";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <?php
-include_once "view/header.php";
+include_once "view/nav.php";
 include_once "view/connection.php";?>
