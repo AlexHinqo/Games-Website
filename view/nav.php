@@ -16,5 +16,3 @@
             <button>Login</button>
         </div>
     </div>
-</body>
-</html>

@@ -9,6 +9,7 @@ $csslink = "view/css/nav.css";
 <head>
     <meta charset="UTF-8">
         <style type="text/css">
+            @import url("css/main.css");
             @import url(<?php echo $csslink; ?>);
         </style>
     <title> <?php echo $title;?> </title>
