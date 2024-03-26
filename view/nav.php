@@ -1,18 +1,15 @@
-<body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <div class="dropdown">
-            <button class="dropbtn">Tabs
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#tab1">Tab 1</a>
-                <a href="#tab2">Tab 2</a>
-                <a href="#tab3">Tab 3</a>
-            </div>
-            </div>
-        </div>
-        <div class="navbar-right">
-            <button>Login</button>
-        </div>
+<div class="navbar">
+  <div class="logo">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+  </div>
+  <div class="brand">Philia</div>
+  <div class="icons">
+    <img src="jour.png" alt="jour">
+    <img src="nuit.png" alt="nuit">
+    <img src="connexion.png" alt="connexion">
+  </div>
+</div>

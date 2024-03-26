@@ -47,4 +47,5 @@ p, h1, h2, h3, h4, h5, h6 {
   --secondary-color: #4B0EBD;
   --text-color: #ffffff;
   --secondary-text-color: #cecdd1;
+  --main-gradient: linear-gradient(0deg, rgba(111,77,210,1) 0%, rgba(75,14,189,1) 100%);
 }
