@@ -1,0 +1,79 @@
+/* Import constants.css */
+@import url('./constants.css');
+
+/* Navbar styles */
+.navbar {
+    position: relative; /* Set position relative */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    height: 80px;
+    width: 100%;
+    color: white;
+}
+
+
+/* Hamburger button */
+.hamburger {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+/* Hamburger bars */
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Close button appearance */
+.hamburger.close span#mid {
+    display: none;
+}
+.hamburger.close span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.close span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Brand styles */
+.brand {
+    position: absolute; /* Set position absolute */
+    left: 50%; /* Move to the horizontal center */
+    transform: translateX(-50%); /* Move back by half of its own width */
+    font-size: 48px
+
+}
+
+
+/* Icon button styles */
+.icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    height: auto;
+    width: 50px;
+}
+
+#bt-darkmode {margin-right: 15px;}
+
+/* Mobile */
+@media screen and (max-width: 540px) {
+    #bt-darkmode {
+        display: none; /* Hide dark mode button on smaller screens */
+    }
+}

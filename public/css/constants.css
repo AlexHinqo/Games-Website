@@ -21,6 +21,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Baloo', sans-serif;
 }
 /*
   5. Improve media defaults
@@ -42,6 +43,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+/* Colors */
 :root {
   --primary-color: #6F4DD2;
   --secondary-color: #4B0EBD;
