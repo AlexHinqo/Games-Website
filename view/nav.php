@@ -15,4 +15,5 @@
       <img src="public/assets/icon-account.png" alt="">
     </button>
   </div>
+</div>
 </nav>

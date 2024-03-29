@@ -1,7 +1,7 @@
 <?php
 include_once "rootfile.php";
 $title = "Games website";
-$csslink = "public/css/nav.css";
+$csslink = "public/css/culture.css";
 ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ $csslink = "public/css/nav.css";
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo&display=swap">
     <!-- CSS Links -->
         <style type="text/css">
-            @import url("public/css/main.css");
+            @import url("public/css/nav.css");
             @import url(<?php echo $csslink; ?>);
         </style>
     <!-- Title -->

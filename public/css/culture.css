@@ -1,0 +1,78 @@
+/* Import constants.css */
+@import url('./constants.css');
+
+
+/*Question number*/
+.qnumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10vw;
+    height: 10vh;
+    margin: 5vh auto;
+    background-color: var(--primary-color);
+    border-radius: 6px 6px 6px 6px;
+}
+
+.qnumber > p {
+    color: white;
+    font-size: 4vh;
+    padding: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+    .qnumber {
+        width: 9vh;
+        height: 8.5vh;
+    }
+    .qnumber > p{
+        font-size: 3vh;
+    }
+}
+
+/*-------------------------------------------*/
+
+/* Question : text*/
+.questiontext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 15vw;
+    width: auto; /* Adjust width as needed */
+    height: auto; /* Set the height equal to the width to make it a square */
+    background-image: url("../assets/questionbg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 10px solid var(--secondary-color);
+    border-radius: 6px 6px 6px 6px;
+
+  }
+  
+  .text {
+    text-align: center; /* Center the text horizontally */
+    margin: 0; /* Remove default margin */
+    padding: 3vw; /* Add padding for better readability */
+    max-width: 100%; /* Ensure text does not overflow */
+    max-height: 100%; /* Ensure text does not overflow */
+    overflow: hidden; /* Hide text overflow */
+    word-wrap: break-word; /* Wrap long words */
+    font-size: 3vw; /* Font size based on viewport width */
+    color: var(--secondary-color);
+  }
+
+/* Mobile */
+@media screen and (max-width: 540px) {
+
+    .questiontext {
+        border: 5px solid var(--secondary-color);
+        margin: 5vh 10vw;
+    }
+
+    .text {
+        font-size: 6vw;
+    }
+}
+
+  
