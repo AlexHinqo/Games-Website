@@ -17,8 +17,8 @@
 
 /* Hamburger button */
 .hamburger {
-    width: 40px;
-    height: 30px;
+    width: 45px;
+    height: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -35,19 +35,79 @@
     height: 6px;
     background-color: #fff;
     border-radius: 20px;
-    transition: all 0.3s ease;
+    transition: all .5s ease;
 }
 
+/* Hamburger menu */
+
+.hamburgermenu {
+    position: fixed;
+    top: 80px;
+    padding-bottom: 80px;
+    left: -100%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    transition: left 0.3s ease;
+  }
+
+.hamburgermenu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+    list-style: none;
+    text-align: center;
+    color: lightgrey;
+}
+
+
+
+.hamburgermenu a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+}
+
+
+.hamburgermenu a:hover:not(.disabled){
+    border-bottom-color: white; 
+}
+
+.hamburgermenu .disabled {
+    color:rgb(167, 167, 167);
+    cursor: not-allowed;
+}
+
+
+.hamburgermenu .line {
+    display: inline-flex;
+    height: 1px;
+    width: 80%;
+    border-top: 1px solid white;
+}
 /* Close button appearance */
-.hamburger.close span#mid {
-    display: none;
-}
+
 .hamburger.close span:first-child {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(15px) rotate(45deg);
 }
+
+.hamburger.close span#mid {
+    opacity: 0;
+}
+
 .hamburger.close span:last-child {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: translateY(-15px) rotate(-45deg);
 }
+
+
 
 
 /* Brand styles */
@@ -61,7 +121,14 @@
 
 
 /* Icon button styles */
+
+.icons {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
 .icons button {
+    display: revert;
     background: none;
     border: none;
     cursor: pointer;

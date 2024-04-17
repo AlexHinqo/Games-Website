@@ -21,5 +21,5 @@ $csslink = "public/css/culture.css";
 </head>
 <?php
 include_once "view/nav.php";
-include_once "view/connection.php";?>
+include_once "view/culture.php";?>
 <script src="public/js/nav.js"></script> 
