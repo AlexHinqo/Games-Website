@@ -1,14 +1,74 @@
 /* Import constants.css */
 @import url('./constants.css');
 
+/* SETTINGS */
 
-/*Question number*/
+.start {
+    background-color: var(--secondary-color);
+    margin: 3vh auto;
+    color: white;
+    font-size: 4vh;
+    padding: 20px;
+    width: 90%;
+    border-radius: 6px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.start div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    width: 100%;
+}
+
+#startbuttons {
+    justify-content: center;
+}
+
+#invitecomp {
+    color: lightgrey;
+    font-size: 70%;
+}
+
+.start button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px 6px 6px 6px;
+    transition: 0.3s ease-in-out;
+    transition: all 100ms ease-in-out;
+    width: 50%;
+}
+
+.start #changegame {
+    margin-right: 10px;
+}
+
+.endinfos button:hover {
+    background-color: var(--secondary-color);
+    font-size: 110%;
+}
+
+.endinfos button:active {
+    background-color: var(--secondary-color);
+    font-size: 110%;
+}
+
+/* MAIN PAGE */
+
+/*Question : Number*/
 .qnumber {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 8vw;
-    height: 5vw;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 10px;
     margin: 5vh auto;
     background-color: var(--primary-color);
     border-radius: 6px 6px 6px 6px;
@@ -24,26 +84,26 @@
 /* Mobile */
 @media screen and (max-width: 540px) {
     .qnumber {
-        width: 70px;
+        width: 80px;
+        height: 5%;
     }
     .qnumber > p{
         font-size: 25px;
     }
 }
 
-/*-------------------------------------------*/
 
-/* Question : text*/
-.questiontext {
+/* Question : Text*/
+.qtext {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3vh 15vw;
+    margin: 1vh 15vw;
     background-image: url("../assets/questionbg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border: 10px solid var(--secondary-color);
+    border: 6px solid var(--secondary-color);
     border-radius: 6px 6px 6px 6px;
 
   }
@@ -52,80 +112,178 @@
     text-align: center; /* Center the text horizontally */
     margin: 0; /* Remove default margin */
     padding: 3vw; /* Add padding for better readability */
-    max-width: 100%; /* Ensure text does not overflow */
-    max-height: 100%; /* Ensure text does not overflow */
-    overflow: hidden; /* Hide text overflow */
-    word-wrap: break-word; /* Wrap long words */
-    font-size: 3vw; /* Font size based on viewport width */
+    max-width: 100%;
+    max-height: 100%; 
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: 2vw;
     color: var(--secondary-color);
   }
 
 
-/* Question : Answer*/
-
-.questionanswer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.questionanswer textarea {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3vh 0;
-    text-transform: uppercase;
-    width: 150%;
-    border: 4px solid var(--secondary-color);
-    border-radius: 6px 6px 6px 6px;
-}
-
-.questionanswer textarea::placeholder{
-    opacity: 0.6;
-    color: var(--secondary-color);
-    padding-left: 100px;
-}
 
 /* Mobile */
 @media screen and (max-width: 540px) {
 
-    .questiontext {
+    .qtext {
         margin: 5vh 10vw;
     }
 
     .text {
-        font-size: 6vw;
+        font-size: 5vw;
     }
 }
 
-/*-------------------------------------------*/
 
+/* Question : Answer*/
 
-/* Question answer */
 .qanswer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3vw 15vw;
 }
 
-.qanswer input {
-    width: 90%;
-    height: 3vh; 
-    padding: 4.5vh 2vw;
-    font-size: 2.2vw;
+.qanswer form{
+    display: block;
+    text-align: center;
+}
+
+.qanswer textarea {
+    margin: 3vh 0;
+    width: 100%;
+    white-space: pre;
+    border: 4px solid var(--secondary-color);
+    border-radius: 6px 6px 6px 6px;
+    padding: 8px 0 0 12px;
+    font-size: 1.5vw;
+    color: var(--secondary-color);
+    resize: none;
+}
+
+.qanswer textarea::placeholder{
+    opacity: 0.6;
+    font-size: 120%;
+    text-transform: uppercase;
+}
+
+
+.qanswer button[type=submit] {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    font-size: 150%;
+    cursor: pointer;
+    border-radius: 6px 6px 6px 6px;
+    transition: 0.3s ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+.qanswer button[type=submit]:hover {
     background-color: var(--secondary-color);
-    color: var(--text-color);
-    border-radius: 6px4
 }
 
-/* Styles pour les appareils mobiles */
+.qanswer button[type=submit]:active {
+    background-color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+/* Mobile */
 @media screen and (max-width: 540px) {
     .qanswer {
-        margin: 3vh 10vw;
+        margin: -2vh 15vw;
     }
 
-    .qanswer input {
-        font-size: 4vw;
+    .qanswer textarea {
+        font-size: 5vw;
+    }
+}
+
+/* END */
+
+.endtext {
+    background-color: var(--secondary-color);
+    margin: 3vh auto;
+    color: white;
+    font-size: 35px;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.endinfos {
+    background-color: var(--secondary-color);
+    margin: 3vh auto;
+    color: white;
+    font-size: 4vh;
+    padding: 20px;
+    width: 90%;
+    border-radius: 6px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.endinfos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5px;
+    width: 100%;
+}
+
+#endbuttons {
+    justify-content: center;
+}
+
+.endinfos button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 6px 6px 6px 6px;
+    transition: 0.3s ease-in-out;
+    transition: all 100ms ease-in-out;
+    width: 50%;
+}
+
+.endinfos button:hover {
+    background-color: var(--secondary-color);
+}
+
+.endinfos button:active {
+    background-color: var(--secondary-color);
+    font-size: 110%;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 540px) {
+    .endtext {
+        font-size: 20px;
+    }
+
+    .endinfos div span:first-child {
+        width: 70%;
+    }
+
+    .endinfos {
+        width: 94%;
+    }
+
+    #endbuttons {
+        display: block;
+    }
+
+    #endbuttons > button {
+        width: 100%;
+    }
+
+    #changegame {
+        margin-bottom: 12px;
+    }
+
+    .endinfos {
+        font-size: 20px;
     }
 }

@@ -1,2 +1,2 @@
 <?php
-$racine = dirname(__FILE__);
+$root = dirname(__FILE__);

@@ -136,7 +136,8 @@
     width: 50px;
 }
 
-#bt-darkmode {margin-right: 15px;}
+/* Hide the tooltip by default */
+#bt-darkmode {margin-right: 15px; visibility: hidden;}
 
 /* Mobile */
 @media screen and (max-width: 540px) {
