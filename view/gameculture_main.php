@@ -1,13 +1,13 @@
 <div class="qnumber">
-    <p>4/20</p>
+    <p><?php echo ($qnumber+1) . "/" . $qtotal; ?></p>
 </div>
 
 <div class="question">
     <div class="qtext">
-        <p class="text">Quel écrivain français du XIXe siècle a été influent pour son œuvre "Les Misérables" ?</p>
+        <p class="text"><?php echo $question_text ?></p>
     </div>
     <div class="qanswer">
-        <form action="submit.php" method="post">
+        <form action="" method="post">
             <textarea id="answerInput" name="answer" placeholder="Votre réponse.." required></textarea>
             <button type="submit">VALIDER</button>
         </form>

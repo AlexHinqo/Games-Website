@@ -67,7 +67,7 @@
 
 
 
-.hamburgermenu a {
+.hamburgermenu li {
     text-decoration: none;
     color: white;
     font-size: 40px;
@@ -77,7 +77,7 @@
 }
 
 
-.hamburgermenu a:hover:not(.disabled){
+.hamburgermenu li:hover:not(.disabled){
     border-bottom-color: white; 
 }
 
@@ -115,8 +115,7 @@
     position: absolute; /* Set position absolute */
     left: 50%; /* Move to the horizontal center */
     transform: translateX(-50%); /* Move back by half of its own width */
-    font-size: 48px
-
+    font-size: 48px;
 }
 
 
@@ -125,6 +124,10 @@
 .icons {
     opacity: 1;
     transition: opacity 0.3s ease;
+    position: absolute;
+    right: 20px; /* Adjust the position from the right side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
 }
 
 .icons button {
@@ -134,10 +137,10 @@
     cursor: pointer;
     height: auto;
     width: 50px;
+    margin-left: 15px; /* Add some margin between buttons */
 }
 
 /* Hide the tooltip by default */
-#bt-darkmode {margin-right: 15px; visibility: hidden;}
 
 /* Mobile */
 @media screen and (max-width: 540px) {
