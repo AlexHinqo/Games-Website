@@ -8,7 +8,7 @@
         <style type="text/css">
             @import url("public/css/nav.css");
             @import url("public/css/culture.css");
-            /* @import url("public/css/nav.css"); */
+            @import url("public/css/main.css");
         </style>
     <!-- Title -->
     <title> <?php echo 'Philia - '.$title;?> </title>

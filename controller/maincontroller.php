@@ -8,6 +8,7 @@ function maincontroller($action){
     $Actions["gameculture_end"] = "gameculture_end.php";
     $Actions["inscription"] = "inscription.php";
     $Actions["connexion"] = "connexion.php";
+    $Actions["about"] = "about.php";
 
     
     if (array_key_exists ( $action , $Actions )){

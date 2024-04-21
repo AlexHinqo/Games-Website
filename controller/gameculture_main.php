@@ -8,12 +8,15 @@ include "$root/model/temp.php";
 $title = "Culture Game";
 include "$root/view/nav.php";
 
-session_name("quizz");
-session_start();
+if (isset($_SESSION['quizz'])) {
+    // Destruction de la session "quizz"
+    session_unset();
+    session_destroy(); }
 
-if (!isset($_SESSION['user_id'])) {
-    $_SESSION['user_id'] = session_id();
-}
+
+session_name("quizz");
+session_id("quizz");
+session_start();
 
 $questions = array(
     array(
@@ -54,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Check if all questions have been answered
 if ($_SESSION['current_question'] >= count($questions)) {
     // Redirect to the end page
+    header("Location: end_page.php");
     exit;
 }
 
@@ -87,11 +91,10 @@ $qtotal = count($questions);
 
 <!-- Display session ID for debugging purposes -->
 <div>
-    <p>Session ID: <?php echo $_SESSION['current_question']; ?></p>
+    <p>Session ID: <?php echo session_id(); ?></p>
 </div>
 </body>
-</html>
-
+</html> 
 
 <?php
 // $title = "Culture Game";

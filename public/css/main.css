@@ -1,3 +1,20 @@
 /* Import constants.css */
 @import url('./constants.css');
 
+.about {
+    display: block;
+    margin-top: 2%;
+    text-align: center;
+    line-height: 3vh;
+    font-size: 2vh;
+    font-weight: 100;
+    margin-left: 15%;
+    margin-right: 15%;
+    list-style: none;
+}
+
+.about ul {
+    list-style: none;
+}    
+
+
