@@ -140,6 +140,10 @@
     margin-left: 15px; /* Add some margin between buttons */
 }
 
+#bt-darkmode {
+    visibility: hidden;
+}
+
 /* Hide the tooltip by default */
 
 /* Mobile */

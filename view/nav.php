@@ -32,13 +32,13 @@
       <img src="public/assets/icon-darkmode.png" alt="">
     </button> 
     <button aria-label="Account" class="icon-button" id="bt-account">
-        <a href="index.php?action=login"><img src="public/assets/icon-account.png" alt=""></a>
+        <a href="index.php?action=connection"><img src="public/assets/icon-account.png" alt=""></a>
     </button>
   </div>
 
   <div class = "hamburgermenu">
     <ul>
-      <li><a href="index.php?action=login">Se connecter</a></li>
+      <li><a href="index.php?action=connection">Se connecter</a></li>
       <li class="disabled">Mode Sombre</a></li>
       <li><a href="index.php" class="disabled">Actualités</a></li>
       <li><a href="index.php?action=about">À propos</a></li>

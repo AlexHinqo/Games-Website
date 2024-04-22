@@ -6,9 +6,11 @@ function maincontroller($action){
     $Actions["gameculture_start"] = "gameculture_start.php";
     $Actions["gameculture_main"] = "gameculture_main.php";
     $Actions["gameculture_end"] = "gameculture_end.php";
-    $Actions["inscription"] = "inscription.php";
-    $Actions["connexion"] = "connexion.php";
+    $Actions["register"] = "register.php";
+    $Actions["connection"] = "connection.php";
     $Actions["about"] = "about.php";
+    $Actions["profile"] = "about.php";
+    $Actions["admin"] = "admin.php";
 
     
     if (array_key_exists ( $action , $Actions )){

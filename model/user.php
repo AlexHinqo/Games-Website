@@ -13,7 +13,7 @@ function verifyPassword($enteredPassword, $hashedPassword) {
 }
 
 
-function createUser($username, $email, $password) {
+function createUser($email, $password, $username) {
     $dbConnection = connectdb('user');
 
     try {
@@ -33,11 +33,10 @@ function createUser($username, $email, $password) {
         $req = $dbConnection->prepare("INSERT INTO passwords (user_id, password_hash) VALUES (:user_id, :password)");
         $req->bindParam(':user_id', $userID);
         $req->bindParam(':password', $hashedPassword);
-        
-        $req->execute();
 
-        // Return the ID of the newly created user
-        return $userID;
+        $registered = $req->execute();
+        return [$registered,$userID];
+
     } catch(PDOException $e) {
         echo "Error: " . $e->getMessage();
         return false;
