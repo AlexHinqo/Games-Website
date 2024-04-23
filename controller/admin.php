@@ -28,8 +28,10 @@ if(isset($_POST['submitmodify'])) {
 
     if ($choice == 'delete') {
         deleteQuestion($question_id);
+        $_POST = array();
     } elseif ($choice == 'update') {
         updateQuestion($question_id,$question_text,$answer_text[0]);
+        $_POST = array();
     }
 
 } elseif(isset($_POST['submitadd'])) {
@@ -37,6 +39,7 @@ if(isset($_POST['submitmodify'])) {
 
     $cat_id = 10;
     addQuestion($question_text,$answer_text,$cat_id);
+    $_POST = array();
 }
 
 $title = "Admin";

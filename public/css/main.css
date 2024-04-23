@@ -61,7 +61,14 @@
     color: white;
     text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
     font-size: 3vw;
-    transition: all 0.1s ease-in-out ;
+    transition: all 0.1s ease-in-out;
+    cursor: not-allowed;
+}
+
+#logintemp {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 24px;
 }
 
 .gameculture div:hover {
@@ -132,10 +139,6 @@ cursor: pointer;
 }
 
 
-/* PROFILE */
-
-
-
 
 /* ADMIN */
 
@@ -202,3 +205,28 @@ cursor: pointer;
     background-color: #35d13d;
 }
 
+.addquestion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+}
+
+.addquestion div *{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.addquestion input {
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 6px;
+    width: inherit;
+    width: 400px;
+}
+
+.addquestion input[type=submit] {
+    width: 75px;
+    color: white;
+    background-color: var(--primary-color);
+}
