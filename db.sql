@@ -48,7 +48,8 @@ INSERT INTO categories (catname) VALUES
 ('Chansons'),
 ('Films'),
 ('Informatique'),
-('Marques');
+('Marques'),
+('Autres');
 
 
 -- Jeux vidéo

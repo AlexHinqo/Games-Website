@@ -1,6 +1,8 @@
 /* Import constants.css */
 @import url('./constants.css');
 
+/* ABOUT */
+
 .about {
     display: block;
     margin-top: 2%;
@@ -10,63 +12,186 @@
     font-weight: 100;
     margin-left: 15%;
     margin-right: 15%;
-    list-style: none;
 }
 
 .about ul {
     list-style: none;
-}    
-
-.formlogin {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 50px;
 }
 
-.formlogin form input {
-    padding: 10px;
-    margin: 10px;
+.aboutpart {
     background-color: var(--primary-color);
-    color: white;
     border-radius: 6px;
+    color: white;
+    margin: 3vh 10%;
+    padding: 4vh;
 }
 
-.admin {
-    margin-top: 10px;
+.aboutpart h1 {
+    margin-bottom: 24px;
+    font-size: 4vh;
+}
+
+.contact li a {
+    text-decoration: underline;
+}
+
+
+/* HOME */
+
+.gameculture {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    }
+
+.gameculture div {
+    background: url(../assets/bgculturegame.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    padding: 5vh 5vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    border: 6px solid var(--secondary-color);
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+    font-size: 3vw;
+    transition: all 0.1s ease-in-out ;
+}
+
+.gameculture div:hover {
+    font-size: 3.5vw;
+}
+
+.gameculture div:active {
+    margin-top: 1vh;
+}
+
+
+
+/* Mobile */
+@media screen and (max-width: 540px) {
+    .gameculture div {
+        border: 3px solid var(--secondary-color);
+        font-size: 8vw;
+    }
+}
+
+/* LOGIN/REGISTER */
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 7vh;
+    width: 100%;
+    text-align: center;
+    }
+
+.maincontainer h1 {
     margin-bottom: 20px;
+}
+.maincontainer div {
+background-color: var(--primary-color);
+width: auto;
+height: auto;
+padding: 2vh 2vw;
+border-radius: 10px;
+color: white;
+transition: all 0.1s ease-in-out ;
+}
+
+.maincontainer form input, .maincontainer a, .maincontainer button {
+padding: 10px;
+margin: 10px;
+background-color: var(--primary-color);
+color: white;
+border: 1px solid white;
+border-radius: 6px;
+transition: background-color 0.1s cubic-bezier(.17,.67,.97,.65);
+font-size: 2vh;
+}
+
+.maincontainer form input:focus {
+border: 3px solid white;
+outline: none;
+}
+
+.formbuttons input[type=submit]:hover, .formbuttons a:hover, .formbuttons button:hover{
+background-color: var(--secondary-color);
+cursor: pointer;
+}
+
+#profilebuttons {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* PROFILE */
+
+
+
+
+/* ADMIN */
+
+
+.adminquestion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-color);
 }
 
 .admin-form {
     display: flex;
+    margin-top: 20px;
 
 }
 
-.admin input {
+.adminquestion input {
     width: 500px;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-left: 1vw;
     padding: 6px;
 }
 
-
-.answer {
-    padding-left: 10px;
+.adminquestion .answer label {
+    padding-left: 20px;
 }
 
 
-.adminbuttons button {
+.adminbuttons left-column input {
     display: block;
     margin-left: 15px;
-    margin-top: 4%;
     width: 100px;
     height: 40px;
     border: 2px solid white;
     border-radius: 6px;
     color: white;
+}
+
+.adminbuttons input {
+    border: 2px solid white;
+    border-radius: 6px;
+    color: white;
+    width: inherit;
+}
+
+
+.adminbuttons input + label {
+    padding: 0 6px;
+}
+
+.adminbuttons input[type=submit] {
+    width: 100px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
 }
 
 .adminbuttons #delete {

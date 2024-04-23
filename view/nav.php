@@ -33,9 +33,9 @@
     </button> 
     <button aria-label="Account" class="icon-button" id="bt-account">
       <?php if (VerifyLogIn()): ?> 
-        <a href="index.php?action=profile"><img src="public/assets/icon-account.png" alt=""></a>
+        <a href="index.php?action=profile"><img src="public/assets/icon-logged.png" alt=""></a>
       <?php else: ?>
-        <a href="index.php?action=connection"><img src="public/assets/icon-account.png" alt=""></a>
+        <a href="index.php?action=connection"><img src="public/assets/icon-login.png" alt=""></a>
       <?php endif; ?>
     </button>
   </div>
@@ -50,7 +50,7 @@
       <li class="disabled">Mode Sombre</a></li>
       <li class="disabled">Actualités</a></li>
       <li><a href="index.php?action=about">À propos</a></li>
-      <li><span class="line"></span></li>
+      <li class="disabled"><span class="line"></span></li>
     </ul>
   </div>
 

@@ -7,24 +7,36 @@ include_once "$root/model/culture.php";
 
 if (session_status() !== PHP_SESSION_ACTIVE){
     session_start();}
-
+    
+// VERIF ADMIN
 if ($_SESSION['user']['isadmin'] == 0 || VerifyLogIn() == false){
-    echo "<script>'suu  '</script>";
         header("Location: index.php?action=default");
+        session_write_close();
         exit();
     }
 
- 
-
-$array = getAllQuestions();
-
-
-
-function display($array) {
+function displayAllQuestions() {
     global $root;
-    foreach ($array as $questionId => $data) {
+    $arrayquestions = getAllQuestions();
+    foreach ($arrayquestions as $questionId => $data) {
         include "$root/view/admin_question.php";
     }
+}
+
+if(isset($_POST['submitmodify'])) {
+    extract($_POST);
+
+    if ($choice == 'delete') {
+        deleteQuestion($question_id);
+    } elseif ($choice == 'update') {
+        updateQuestion($question_id,$question_text,$answer_text[0]);
+    }
+
+} elseif(isset($_POST['submitadd'])) {
+    extract($_POST);
+
+    $cat_id = 10;
+    addQuestion($question_text,$answer_text,$cat_id);
 }
 
 $title = "Admin";
