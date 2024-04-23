@@ -40,7 +40,7 @@ function hashAndStorePassword($userId, $password) {
 require_once "connectdb.php";
 
 function getUser() {
-    $dbConnection = connectdb('user'); // Establish database connection
+    $dbConnection = connectdb(); // Establish database connection
 
     try {
         // Prepare and execute SQL statement

@@ -1,7 +1,7 @@
 <?php
 include "rootfile.php";
 include "$root/controller/maincontroller.php";
-// include_once "$root/model/login.php";
+include_once "$root/model/user.php";
 
 
 if (isset($_GET["action"])){

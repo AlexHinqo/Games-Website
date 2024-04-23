@@ -32,3 +32,48 @@
     border-radius: 6px;
 }
 
+.admin {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-form {
+    display: flex;
+
+}
+
+.admin input {
+    width: 500px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 6px;
+}
+
+
+.answer {
+    padding-left: 10px;
+}
+
+
+.adminbuttons button {
+    display: block;
+    margin-left: 15px;
+    margin-top: 4%;
+    width: 100px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 6px;
+    color: white;
+}
+
+.adminbuttons #delete {
+    background-color: #d13535;
+}
+
+.adminbuttons #update {
+    background-color: #35d13d;
+}
+

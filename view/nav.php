@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Fonts -->
+    <link rel="icon" type="image/x-icon" href="public/assets/icon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo&display=swap">
     <!-- CSS Links -->
         <style type="text/css">
@@ -16,7 +17,6 @@
 </head>
 
 <body>
-
 <nav class="navbar">
 
   <div class="hamburger">
@@ -32,20 +32,29 @@
       <img src="public/assets/icon-darkmode.png" alt="">
     </button> 
     <button aria-label="Account" class="icon-button" id="bt-account">
+      <?php if (VerifyLogIn()): ?> 
+        <a href="index.php?action=profile"><img src="public/assets/icon-account.png" alt=""></a>
+      <?php else: ?>
         <a href="index.php?action=connection"><img src="public/assets/icon-account.png" alt=""></a>
+      <?php endif; ?>
     </button>
   </div>
 
   <div class = "hamburgermenu">
     <ul>
-      <li><a href="index.php?action=connection">Se connecter</a></li>
+    <?php if (VerifyLogIn()): ?>
+        <li><a href="index.php?action=logout">Se déconnecter</a></li>
+    <?php else: ?>
+        <li><a href="index.php?action=connection">Se connecter</a></li>
+    <?php endif; ?>
       <li class="disabled">Mode Sombre</a></li>
-      <li><a href="index.php" class="disabled">Actualités</a></li>
+      <li class="disabled">Actualités</a></li>
       <li><a href="index.php?action=about">À propos</a></li>
       <li><span class="line"></span></li>
     </ul>
   </div>
 
 </nav>
+
 
 <script src="public/js/nav.js"></script>

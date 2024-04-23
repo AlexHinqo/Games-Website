@@ -14,22 +14,18 @@ function verifyPassword($enteredPassword, $hashedPassword) {
 
 
 function createUser($email, $password, $username) {
-    $dbConnection = connectdb('user');
+    $dbConnection = connectdb();
 
     try {
-        // New user
         $req = $dbConnection->prepare("INSERT INTO users (username, email) VALUES (:username, :email)");
         $req->bindParam(':username', $username);
         $req->bindParam(':email', $email);
         
         $req->execute();
-
-        // Get the ID of the newly created user
         $userID = $dbConnection->lastInsertId();
 
         $hashedPassword = hash_password($password);
 
-        // Prepare and execute SQL statement to insert password
         $req = $dbConnection->prepare("INSERT INTO passwords (user_id, password_hash) VALUES (:user_id, :password)");
         $req->bindParam(':user_id', $userID);
         $req->bindParam(':password', $hashedPassword);
@@ -38,18 +34,17 @@ function createUser($email, $password, $username) {
         return [$registered,$userID];
 
     } catch(PDOException $e) {
-        echo "Error: " . $e->getMessage();
+        throw $e;
         return false;
     }
 }
 
-function verifyUser($username,$password) {
-    $dbConnection = connectdb('user');
+function verifyUser($mail,$password) {
+    $dbConnection = connectdb();
     
     try {
-        // New user
-        $req = $dbConnection->prepare("SELECT id, password_hash FROM users JOIN passwords ON users.id = passwords.user_id WHERE username = :username");
-        $req->bindParam(':username', $username);
+        $req = $dbConnection->prepare("SELECT id, email, password_hash, username FROM users JOIN passwords ON users.id = passwords.user_id WHERE email = :email");
+        $req->bindParam(':email', $mail);
         $req->execute();
         $user = $req->fetch(PDO::FETCH_ASSOC);
 
@@ -58,11 +53,11 @@ function verifyUser($username,$password) {
             if (verifyPassword($password, $hashedPassword)) {
                 return true;
             } else {
-                error_log("Wrong Password for : ".$username);
+                error_log("Wrong Password for : ".$user['username']);
                 return false;
             }
         } else {
-            error_log("User not found : ".$username);
+            error_log("User not found : ".$mail);
             return false; // User not found
         }
 
@@ -71,3 +66,31 @@ function verifyUser($username,$password) {
         return false;
     }
 }
+
+function getUserByMail($mail){
+    $dbConnection = connectdb();
+
+    try {
+        $req = $dbConnection->prepare("SELECT id, email, username, is_admin FROM users JOIN passwords ON users.id = passwords.user_id WHERE email = :email");
+        $req->bindParam(':email', $mail);
+        $req->execute();
+        $user = $req->fetch(PDO::FETCH_ASSOC);
+            return $user;
+
+    } catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return false;
+    }
+}
+
+
+function VerifyLogIn() {
+    if (session_status() !== PHP_SESSION_ACTIVE){
+    session_start();}
+
+    if (isset($_SESSION['user']) && is_array($_SESSION['user'])) {return true;}
+    else {return false;}
+    session_write_close();
+}
+
+?>

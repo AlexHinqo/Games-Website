@@ -7,7 +7,7 @@ function passwordLANSSI($password) {
     return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z\d\s])[\w\d\W]{8,}$/', $password);
 }
 
-include "$root/model/user.php";
+include_once "$root/model/user.php";
 
 $registered = false;
 $res = "";
@@ -19,13 +19,12 @@ if (isset($_POST["mailUser"]) && isset($_POST["passwordUser"]) && isset($_POST["
         $password = $_POST["passwordUser"];
         $nickname = $_POST["nicknameUser"];
 
-        // vérification que le mot de passe correspond aux normes de LANSSI
         if (passwordLANSSI($password)) {
             try {
                 $registered = createUser($mail, $password, $nickname)[0];
             } catch (PDOException $e) {
                 if ($e->getCode() == '23000') {
-                    // Erreur de contrainte d'intégrité, probablement une duplication
+
                     if (strpos($e->getMessage(), 'email') == true) {
                         $res = "<script>alert('Error: Email already exists');</script>";
 

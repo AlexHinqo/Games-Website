@@ -9,8 +9,9 @@ function maincontroller($action){
     $Actions["register"] = "register.php";
     $Actions["connection"] = "connection.php";
     $Actions["about"] = "about.php";
-    $Actions["profile"] = "about.php";
+    $Actions["profile"] = "profile.php";
     $Actions["admin"] = "admin.php";
+    $Actions["logout"] = "logout.php";
 
     
     if (array_key_exists ( $action , $Actions )){

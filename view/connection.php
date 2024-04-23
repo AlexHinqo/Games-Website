@@ -3,10 +3,10 @@
 <div class="formlogin">
     <h1>Connexion</h1>
 
-    <form action="./?action=connexion" method="POST">
+    <form action="index.php?action=connection" method="POST">
 
-        <input type="text" name="mailU" placeholder="Email de connexion" /><br />
-        <input type="password" name="mdpU" placeholder="Mot de passe"  /><br />
+        <input type="text" name="mailUser" placeholder="Email" /><br />
+        <input type="password" name="passwordUser" placeholder="Mot de passe"  /><br />
         <input type="submit" />
 
     </form>

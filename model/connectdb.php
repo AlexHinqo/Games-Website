@@ -1,10 +1,10 @@
 <?php
 
-function connectdb($usertype) {
+function connectdb() {
     $host = 'localhost';
     $dbname = 'philia';
-    $username = $usertype;
-    $password = ($usertype == 'user') ? 'user' : 'admin';
+    $username = 'userdb';
+    $password = 'userdb';
 
     try {
         $dbConnection = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
