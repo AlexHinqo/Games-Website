@@ -12,6 +12,7 @@ function maincontroller($action){
     $Actions["profile"] = "profile.php";
     $Actions["admin"] = "admin.php";
     $Actions["logout"] = "logout.php";
+    $Actions["deleteaccount"] = "deleteaccount.php";
 
     
     if (array_key_exists ( $action , $Actions )){

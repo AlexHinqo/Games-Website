@@ -93,4 +93,23 @@ function VerifyLogIn() {
     session_write_close();
 }
 
+
+function deleteUser($id){
+    $dbConnection = connectdb();
+
+    try {
+        $req = $dbConnection->prepare("DELETE FROM passwords WHERE user_id = :id");
+        $req->bindParam(':id', $id);
+        $req->execute();
+
+        $req = $dbConnection->prepare("DELETE FROM users WHERE id = :id");
+        $req->bindParam(':id', $id);
+        $req->execute();
+
+    } catch(PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return false;
+    }
+}
+
 ?>

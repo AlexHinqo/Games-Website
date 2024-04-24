@@ -1,4 +1,3 @@
-
 <!-- <a href="index.php?action=gameculture_start"> -->
 <div class="gameculture">
     <div>
