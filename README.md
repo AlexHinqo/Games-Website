@@ -31,10 +31,10 @@
 
 ###
 
-<img align="right" height="" src="https://i.ibb.co/0Vcjnt0/Userdiagram.jpg"  />
+<img align="right" height="500" src="https://i.ibb.co/0Vcjnt0/Userdiagram.jpg"  />
 
 ###
 
-<img align="left" height="425" src="https://i.ibb.co/XFd0mH1/image.png"  />
+<img align="left" height="300" src="https://i.ibb.co/XFd0mH1/image.png"  />
 
 ###
