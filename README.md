@@ -26,7 +26,7 @@
 
 ###
 
-<h2 align="left">Use case diagram + MCD</h2>
+<h2 align="left">Use case diagram + MCD (French) </h2>
 <p> Si les images ne s'affichent pas, mvc et diagramme dans le dossier "temp" </p>
 
 ###
