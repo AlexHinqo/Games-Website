@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for deploying PHP content to GitHub Pages
+name: Deploy PHP content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -31,13 +31,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
         with:
-          # Upload entire repository
-          path: '.'
+          php-version: '7.4' # Choose your desired PHP version
+          extensions: pdo, pdo_mysql # Add any required PHP extensions
+      - name: Copy PHP files
+        run: cp index.php $GITHUB_WORKSPACE
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          publish_dir: $GITHUB_WORKSPACE
+          target_branch: gh-pages # Use the gh-pages branch for deployment
