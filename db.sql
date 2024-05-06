@@ -1,11 +1,3 @@
-CREATE DATABASE philia CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;;
-
-CREATE USER 'userdb' IDENTIFIED BY 'userdb';
-
-GRANT ALL PRIVILEGES ON philia.* TO 'userdb';
-
-USE philia;
-
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
