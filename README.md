@@ -1,11 +1,5 @@
 <h2 align="left">Website - Mini games Philia</h2>
 
-###
-
-<h3 align="left"> URL : <a href="http://philia.tinocoalex.me"  target="_blank"> Philia.tinocoalex.me </a></h3>
-
-###
-
 <p align="left">Site created for educational purposes as part of my 1st year of BTS SIO SLAM (HND)</p>
 
 ###
