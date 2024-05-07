@@ -2,7 +2,7 @@
 
 ###
 
-<h3 align="left"> URL:  <a href="http://philia.tinocoalex.me"  target="_blank"> URL: Philia.tinocoalex.me </a></h3>
+<h3 align="left"> URL : <a href="http://philia.tinocoalex.me"  target="_blank"> Philia.tinocoalex.me </a></h3>
 
 ###
 
