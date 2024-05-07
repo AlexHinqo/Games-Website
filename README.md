@@ -2,7 +2,7 @@
 
 ###
 
-<h3 align="left"><a href="http://www.philia.tinocoalex.me" target='_blank'> URL: Philia.tinocoalex.me </a> (NOT ALWAYS ONLINE, Hosted by AWS)</h3>
+<h3 align="left"><a href="http://philia.tinocoalex.me" target='_blank'> URL: Philia.tinocoalex.me </a> (NOT ALWAYS ONLINE, Hosted by AWS)</h3>
 
 ###
 
