@@ -2,7 +2,7 @@
 
 ###
 
-<h3 align="left"><a href="http://54.209.136.160"> URL: 54.209.136.160 </a> (NOT ALWAYS ONLINE, Hosted by AWS)</h3>
+<h3 align="left"><a href="www.philia.tinocoalex.me"> URL: Philia.tinocoalex.me </a> (NOT ALWAYS ONLINE, Hosted by AWS)</h3>
 
 ###
 
